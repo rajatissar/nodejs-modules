@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-modules",
+  "version": "1.0.0",
+  "description": "This repository deals with how to use nodejs modules with some example",
+  "main": "index.js",
+  "dependencies": {
+    "husky": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatissar/nodejs-modules.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajatissar/nodejs-modules/issues"
+  },
+  "homepage": "https://github.com/rajatissar/nodejs-modules#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
+  }
+}

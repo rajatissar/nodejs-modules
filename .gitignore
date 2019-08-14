@@ -1,0 +1,29 @@
+package-lock.json
+node_modules
+
+axios
+cron-job
+express
+express-brute-memcached
+fast-csv
+gulp
+https
+lodash
+moment
+multer
+mysql-sequelize
+nconf
+node-native-modules
+# npm
+passport
+passport2
+paypal
+pg
+postgres-sequelize
+request
+sandbox
+selenium-webdriver
+# sequelize
+stripe
+tls
+winston 
