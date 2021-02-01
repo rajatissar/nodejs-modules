@@ -9,10 +9,10 @@ const getSuggestion = (value) => {
     console.timeEnd(value);
 };
 
-const throttleFunction = throttle(getSuggestion, 10000);
+const throttleFunction = throttle(getSuggestion, 2000);
 
 // without throttle
-console.log('-------------------- WITHOUT THROTTLE ------------------------------');
+console.log('------------------------------- WITHOUT THROTTLE -------------------------------');
 console.time('without throttle');
 getSuggestion(1); // List of suggestions
 getSuggestion(2); // List of suggestions
@@ -21,10 +21,16 @@ getSuggestion(4); // List of suggestions
 console.timeEnd('without throttle');
 
 // with throttle
-console.log('--------------------- WITH THROTTLE -------------------------------');
+console.log('------------------------------- WITH THROTTLE -------------------------------');
 console.time('with throttle');
 throttleFunction(1); // List of suggestions
 throttleFunction(2); // does not get called
 throttleFunction(3); // does not get called
 throttleFunction(4); // does not get called
+setTimeout(() => {
+    throttleFunction(5); // List of suggestions
+}, 100);
+setTimeout(() => {
+    throttleFunction(6); // List of suggestions
+}, 4000);
 console.timeEnd('with throttle');
